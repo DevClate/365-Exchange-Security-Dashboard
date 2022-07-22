@@ -1,4 +1,5 @@
 #Only can go back 90 days per Microsoft as of 6/11/2022
+#Only 30 days for Top Phish and Malware
 $startdate = Read-Host "Start Date ex 03-01-2022"
 $enddate = Read-Host "End Date ex 03-31-2022"
 $Path = "C:\Scripts\RawMonthlySecurityReport.xlsx"
