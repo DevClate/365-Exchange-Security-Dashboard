@@ -1,13 +1,26 @@
 #Only can go back 90 days per Microsoft as of 6/11/2022
 #Only 30 days for Top Phish and Malware
-$startdate = Read-Host "Start Date ex 03-01-2022"
-$enddate = Read-Host "End Date ex 03-31-2022"
-$Path = "C:\Scripts\RawMonthlySecurityReport.xlsx"
+[CmdletBinding()]
+param (
+    [Parameter(Mandatory)]
+    [string]
+    $UserPrincipalName,
+    [Parameter(Mandatory,HelpMessage='Enter start time, ex 04/01/2022')]
+    [string]
+    $StartDate,
+    [Parameter(Mandatory,HelpMessage='Enter end date, ex 04/30/2022')]
+    [string]
+    $EndDate,
+    [Parameter(Mandatory)]
+    [string]
+    $Path = 'C:\Scripts\RawMonthlySecurityReport.xlsx'
 
-Connect-ExchangeOnline -UserPrincipalName credentials@domain.com
+)
+
+Connect-ExchangeOnline -UserPrincipalName $UserPrincipalName
 
 #All
-Get-MailFlowStatusReport -StartDate $startdate -EndDate $enddate | Export-Excel -Path $Path -workSheetName AllMay22
+Get-MailFlowStatusReport -StartDate $startdate -EndDate $enddate | Export-Excel -Path $Path -workSheetName All
 
 #Inbound Edge Block Spam
 Get-MailFlowStatusReport -StartDate $startdate -EndDate $enddate -Direction Inbound -EventType EdgeBlockSpam  | Export-Excel -Path $Path -WorkSheetName EdgeBlockSpam-Inbound
