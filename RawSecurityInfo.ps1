@@ -1,15 +1,15 @@
 #Only can go back 90 days per Microsoft as of 6/11/2022
-#Only 30 days for Top Phish and Malware
+#Only 30 days for Top Phish and Malware this looks like it has been updated to 90 days as of 10/26/2022
 [CmdletBinding()]
 param (
     [Parameter(Mandatory)]
     [string]
     $UserPrincipalName,
     [Parameter(Mandatory,HelpMessage='Enter start time, ex 04/01/2022')]
-    [string]
+    [datetime]
     $StartDate,
     [Parameter(Mandatory,HelpMessage='Enter end date, ex 04/30/2022')]
-    [string]
+    [datetime]
     $EndDate,
     [Parameter(Mandatory)]
     [string]
@@ -53,13 +53,16 @@ Get-MailFlowStatusReport -StartDate $startdate -EndDate $enddate -Direction Inbo
 Get-MailFlowStatusReport -StartDate $startdate -EndDate $enddate -Direction Outbound -EventType SpamDetections  | Export-Excel -Path $Path -workSheetName SpamDetections-Outbound
 
 #Top Malware
-Get-MailTrafficSummaryReport -Category TopMalwareRecipient –StartDate $startdate -EndDate $enddate | Select-Object C1,C2 | Export-Excel $Path -workSheetName topmalware
+Get-MailTrafficSummaryReport -Category TopMalware –StartDate $startdate -EndDate $enddate | Select-Object C1,C2 | Export-Excel $Path -workSheetName topmalware
 
-#Top Phish
+#Top Malware Recipients
+Get-MailTrafficSummaryReport -Category TopMalwareRecipient –StartDate $startdate -EndDate $enddate | Select-Object C1,C2 | Export-Excel $Path -workSheetName topmalwarerecip
+
+#Top Phish Recipients
 Get-MailTrafficSummaryReport -Category TopphishRecipient –StartDate $startdate -EndDate $enddate | Select-Object C1,C2 | Export-Excel $Path -workSheetName topphish
 
-#Top Phish 10
+#Top Phish Recipients 10
 Get-MailTrafficSummaryReport -Category TopphishRecipient –StartDate $startdate -EndDate $enddate | Select-Object C1,C2 -First 10 | Export-Excel $Path -workSheetName topphish10
 
-#Top Malware 10
-Get-MailTrafficSummaryReport -Category TopMalwareRecipient –StartDate $startdate -EndDate $enddate | Select-Object C1,C2 -First 10 | Export-Excel $Path -workSheetName topmalware10
+#Top Malware Recipients 10
+Get-MailTrafficSummaryReport -Category TopMalwareRecipient –StartDate $startdate -EndDate $enddate | Select-Object C1,C2 -First 10 | Export-Excel $Path -workSheetName topmalwarerecip10
