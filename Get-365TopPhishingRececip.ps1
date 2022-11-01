@@ -12,7 +12,7 @@ function Get-365TopPhishingRecip {
         $EndDate,
         [Parameter()]
         [string]
-        $Path = 'C:\Scripts\TopPishingReport.xlsx'
+        $Path = 'C:\Scripts\TopPishingRecipReport.xlsx'
     )
     
     begin {
