@@ -16,7 +16,7 @@ function Get-365TopPhishingRecip {
     )
     
     begin {
-        Connect-ExchangeOnline -UserPrincipalName $UserPrincipalName
+    
     }
     
     process {
@@ -25,6 +25,6 @@ function Get-365TopPhishingRecip {
     }
     
     end {
-        Disconnect-ExchangeOnline
+        
     }
 }

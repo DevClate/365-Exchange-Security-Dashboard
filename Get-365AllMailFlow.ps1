@@ -16,7 +16,7 @@ function Get-365AllMailFlow {
     )
     
     begin {
-        Connect-ExchangeOnline -UserPrincipalName $UserPrincipalName
+        
     }
     
     process {
@@ -24,6 +24,6 @@ function Get-365AllMailFlow {
     }
     
     end {
-        Disconnect-ExchangeOnline
+        
     }
 }
