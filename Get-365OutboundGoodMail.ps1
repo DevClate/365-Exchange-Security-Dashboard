@@ -1,9 +1,6 @@
 function Get-365OutboundGoodMail {
     [CmdletBinding()]
     param (
-        [Parameter(Mandatory)]
-        [string]
-        $UserPrincipalName,
         [Parameter(Mandatory,HelpMessage='Enter start time, ex 04/01/2022')]
         [datetime]
         $StartDate,
