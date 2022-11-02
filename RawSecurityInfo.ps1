@@ -19,7 +19,6 @@ function Get-365SecurityRaw {
     )
     
     begin {
-        Connect-ExchangeOnline -UserPrincipalName $UserPrincipalName
         
     }
     
@@ -75,6 +74,6 @@ function Get-365SecurityRaw {
     }
     
     end {
-        Disconnect-ExchangeOnline  
+        
     }
 }
