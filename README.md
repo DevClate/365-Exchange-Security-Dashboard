@@ -12,4 +12,5 @@ I have created the functions for 365 Security Dashboard v1 and working on the de
   * [X] Top Malware
 * [X] Create Functions v1
 * [ ] Finalize v1 Design
+* [ ] Create Module
 * [ ] Create Design
