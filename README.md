@@ -4,11 +4,12 @@ Excel Dashboard for Exchange Security
 
 ## Current Status
 
-I have most of the raw data pulled for the 365 Security Dashboard v1.
+I have created the functions for 365 Security Dashboard v1 and working on the design of the dashboard.
 
 ## Next Steps
 
-* [ ] Finish importing last bits of data
-  * [ ] Top Malware
-* [ ] Finalize Layout of Dashboard
-* [ ] Create Functions
+* [X] Finish importing last bits of data
+  * [X] Top Malware
+* [X] Create Functions v1
+* [ ] Finalize v1 Design
+* [ ] Create Design
