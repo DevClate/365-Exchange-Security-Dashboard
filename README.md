@@ -23,3 +23,10 @@ I have created the functions for 365 Security Dashboard v1 and working on the de
 * [ ] Pull Data into SQL for long term reporting and/or for large organizations
 * [ ] Add Quarterly Summary
 * [ ] Email PDF version
+* [ ] Outputs
+  * [ ] Only Excel Dashboard
+  * [ ] Excel Dashboard and seperate raw file
+  * [ ] Excel Dashboard and hidden raw sheet
+  * [ ] Only write to SQL
+  * [ ] PDF File
+  * [ ] Email PDF
