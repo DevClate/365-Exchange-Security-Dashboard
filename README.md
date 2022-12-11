@@ -28,9 +28,9 @@ Cleaning up some of the code for the main report. Created the functions, but nee
 
   * [X] Only Excel Dashboard
   * [X] Excel Dashboard and seperate raw file
-  * [ ] Only write to SQL
-  * [ ] PDF File
-  * [ ] Email PDF
+  * [ ] Funciton to only write to SQL
+  * [ ] Function to only export PDF File
+  * [ ] Function to Email PDF
 
 ## Change Log
 
