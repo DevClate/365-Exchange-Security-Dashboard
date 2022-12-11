@@ -4,7 +4,7 @@ A simple Excel Dashboard for Exchange Security to give you a quick view into the
 
 ## Current Status
 
-I have created the functions for 365 Security Dashboard v1 and working on the design of the dashboard.
+Cleaning up some of the code for the main report. Created the functions, but need to add help to them. 
 
 ## Next Steps
 
