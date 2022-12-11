@@ -1,6 +1,6 @@
 # 365-Exchange-Security-Dashboard
 
-A simple Excel Dashboard for Exchange Security to give you a quick view into the main data points from Exchange Security. These data points are all in the the exchange portal, but they are all seperated out. Also between 90-180 days depending on the data point, the data is removed so there is no long term reporting.
+A simple Excel Dashboard for Exchange Security to give you a quick view into the main data points from Exchange Security. These data points are all in the exchange portal, but they are all seperated out. Furthermore, between 90-180 days depending on the data point, the data is removed so there is no long term reporting.
 
 ## Current Status
 
