@@ -1,9 +1,9 @@
 function Get-365InboundGoodMail {
             <#
         .SYNOPSIS
-            PowerShell script to pull all Inbound Good Mail from Exchange Mailflow data into excel
+            PowerShell script to pull all Inbound Good Mail from Exchange Mailflow data
         .DESCRIPTION
-            PowerShell script to pull all Inbound Good Mail from Exchange Mailflow data into excel with a certain date range.
+            PowerShell script to pull all Inbound Good Mail from Exchange Mailflow data with a certain date range.
             Microsoft doesn't allow past 180 days for Mailflow and only 90 days for Top information. 
         .PARAMETER
             -StartDate [datetime]
