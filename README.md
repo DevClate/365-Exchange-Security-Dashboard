@@ -39,3 +39,4 @@ Dec 11, 2022
 
 * Uploaded v1 Design with and without separate raw file
 * Added functionality so that when you run in it no matter what day of the month, it will pull the previous month information and have everything labeled correctly
+* Added help to functions. Although those functions aren't required to run the script, I did use them when making the script originally. Allows you to customize it how you want too.
