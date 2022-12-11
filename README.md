@@ -24,7 +24,6 @@ Cleaning up some of the code for the main report. Created the functions, but nee
 * [ ] Run as a schedule task on the first of the month it will pull last month's data
 * [ ] Pull Data into SQL for long term reporting and/or for large organizations
 * [ ] Add Quarterly Summary
-* [ ] Email PDF version
 * [ ] Outputs
 
   * [X] Only Excel Dashboard
