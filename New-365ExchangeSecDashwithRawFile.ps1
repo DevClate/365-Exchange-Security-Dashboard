@@ -32,16 +32,16 @@ foreach ($d in $Directions) {
 # Use $MessageOutput to output to host or build report file
 $MessageOutput | Export-Excel $Path -WorksheetName "$Monthtitle Summary" -TableStyle Medium16 -Title "$monthtitle Exchange Mailflow" -StartRow 1 -AutoSize
 
-#Top 10 Summary Sheet
+# Top 10 Summary Sheet
 "$Monthtitle Exchange Top 10" | Export-Excel $Path -workSheetName "$Monthtitle Top" -StartRow 1 -AutoSize
 
-#Top 10 Malware Recipient
+# Top 10 Malware Recipient
 Get-MailTrafficSummaryReport -Category TopMalwareRecipient –StartDate $startdate -EndDate $enddate | Select-Object @{N='Malware Recipients';E={$_.C1}},@{N='Count';E={$_.C2}} -First 10  | Export-Excel $Path -workSheetName "$Monthtitle Top" -TableStyle Medium16 -StartRow 2 -AutoSize
 
-#Top 10 Phish Recipient
+# Top 10 Phish Recipient
 Get-MailTrafficSummaryReport -Category TopphishRecipient –StartDate $startdate -EndDate $enddate | Select-Object @{N='Phishing Recipients';E={$_.C1}},@{N='Count';E={$_.C2}} -First 10 | Export-Excel $Path -workSheetName "$Monthtitle Top" -TableStyle Medium16 -StartRow 2 -StartColumn 4 -AutoSize
 
-#Top Malware
+# Top Malware
 Get-MailTrafficSummaryReport -Category TopMalware –StartDate $startdate -EndDate $enddate | Select-Object @{N='Malware Type';E={$_.C1}},@{N='Count';E={$_.C2}} -First 10 | Export-Excel $Path -workSheetName "$Monthtitle Top" -TableStyle Medium16 -StartRow 2 -StartColumn 7 -AutoSize
 
 $excel = Open-ExcelPackage $Path
