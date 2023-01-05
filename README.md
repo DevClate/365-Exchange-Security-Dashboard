@@ -1,4 +1,4 @@
-# 365-Exchange-Security-Dashboard
+# 365ExchangeSecurityDashboard
 
 A simple Excel Dashboard for Exchange Security to give you a quick view into the main data points from Exchange Security. These data points are all in the exchange portal, but they are all seperated out. Furthermore, between 90-180 days depending on the data point, the data is removed so there is no long term reporting.
 
@@ -28,7 +28,7 @@ Cleaning up some of the code for the main report. Created the functions, but nee
 
   * [X] Only Excel Dashboard
   * [X] Excel Dashboard and seperate raw file
-  * [ ] Funciton to only write to SQL
+  * [ ] Function to only write to SQL
   * [ ] Function to only export PDF File
   * [ ] Function to Email PDF
 
