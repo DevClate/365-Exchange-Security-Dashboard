@@ -23,4 +23,5 @@ jobs:
           NUGET_KEY: ${{ secrets.AUTOTESTGALLERY }}
         shell: pwsh
         run: |
+          ./build.ps1 -Path /tmp/New-365ExchangeSecDash
           Publish-script -Path /New-365ExchangeSecDash.ps1 -NuGetApiKey $env:NUGET_KEY -Verbose
