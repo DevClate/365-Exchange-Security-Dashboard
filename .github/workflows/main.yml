@@ -23,5 +23,5 @@ jobs:
           NUGET_KEY: ${{ secrets.AUTOTESTGALLERY }}
         shell: pwsh
         run: |
-          New-ScriptFileInfo -Path ./New-365ExchangeSecDash.ps1 -Version 1.0 -Author "Clate@clatent.com" -Description "Testing to gallery"
+          # New-ScriptFileInfo -Path ./New-365ExchangeSecDash.ps1 -Version 1.0 -Author "Clate@clatent.com" -Description "Testing to gallery"
           Publish-script -Path ./New-365ExchangeSecDash.ps1 -NuGetApiKey $env:NUGET_KEY -Verbose
