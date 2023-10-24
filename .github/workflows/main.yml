@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build and publish
         env:
-          NUGET_KEY: ${{ secrets.AUTOTESTGALLERY }}
+          NUGET_KEY: ${{ secrets.New365ExchangeSecDash }}
         shell: pwsh
         run: |
           Update-ScriptFileInfo -Path ./New-365ExchangeSecDash.ps1 -Version 1.0 -Author "Clate@clatent.com" -Description "Testing to gallery" -Force
