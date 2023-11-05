@@ -15,4 +15,4 @@ jobs:
         Install-Module -Name ImportExcel -confirm:$false -Force
         $states = @("California", "Texas", "Florida", "New York", "Illinois")     
         $statesObject = $states | ForEach-Object { [PSCustomObject]@{State=$_} }
-        $statesObject | Export-Excel -Path "C:\path\to\your\file.xlsx" -AutoSize
+        $statesObject | Export-Excel -Path ".\testos.xlsx" -AutoSize
