@@ -11,6 +11,9 @@ jobs:
       shell: pwsh
       run: |
         ./Tests/IfMacOs.ps1
+    - name: Run testOS
+      shell: pwsh
+      run: |
         Set-PSRepository psgallery -InstallationPolicy trusted
         Install-Module -Name ImportExcel -confirm:$false -Force
         $states = @("California", "Texas", "Florida", "New York", "Illinois")     
