@@ -11,10 +11,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Check Mac OS (pwsh)
+      shell: pwsh
       run: |
-        Write-host $PSVersionTable.PSVersion.Major $PSVersionTable.PSRemotingProtocolVersion.Minor
-        Set-PSRepository psgallery -InstallationPolicy trusted
         ./Tests/IfMacOs.ps1
+        Set-PSRepository psgallery -InstallationPolicy trusted
         Install-Module -Name 365AutomatedLab -confirm:$false -Force
         Export-CT365ProdUserToExcel -WorkbookName 'Users.xlsx' -FilePath 'C:\Exports' -DepartmentFilter 'IT' -UserLimit 20      
-      shell: pwsh
