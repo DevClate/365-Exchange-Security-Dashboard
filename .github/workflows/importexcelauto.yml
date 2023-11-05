@@ -1,0 +1,18 @@
+name: Import Excel Mac Test Autosize
+on:
+  push:
+    branches: [ main ]
+jobs:
+  test-pwsh:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Check Mac OS (pwsh)
+      shell: pwsh
+      run: |
+        ./Tests/IfMacOs.ps1
+        Set-PSRepository psgallery -InstallationPolicy trusted
+        Install-Module -Name ImportExcel -confirm:$false -Force
+        $states = @("California", "Texas", "Florida", "New York", "Illinois")     
+        $statesObject = $states | ForEach-Object { [PSCustomObject]@{State=$_} }
+        $statesObject | Export-Excel -Path "C:\path\to\your\file.xlsx" -AutoSize
