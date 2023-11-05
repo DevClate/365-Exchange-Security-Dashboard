@@ -14,7 +14,7 @@ jobs:
       run: |
         Write-host $PSVersionTable.PSVersion.Major $PSVersionTable.PSRemotingProtocolVersion.Minor
         Set-PSRepository psgallery -InstallationPolicy trusted
-        -file /Tests/IfMacOs.ps1
+        ./Tests/IfMacOs.ps1
         Install-Module -Name 365AutomatedLab -confirm:$false -Force
         Export-CT365ProdUserToExcel -WorkbookName 'Users.xlsx' -FilePath 'C:\Exports' -DepartmentFilter 'IT' -UserLimit 20      
       shell: pwsh
